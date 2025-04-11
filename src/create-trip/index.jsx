@@ -50,7 +50,7 @@ function CreateTrip() {
       setOpenDialog(true)
       return ;
     }
-    if(formData?.totalDays>5 || !formData?.location || !formData?.budget || !formData?.traveler){
+    if(formData?.totalDays>10 || !formData?.location || !formData?.budget || !formData?.traveler){
       toast("Please fill all details!")
       return ;
     }
@@ -63,7 +63,7 @@ function CreateTrip() {
     .replace('{budget}',formData?.budget)
 
     const result=await chatSession.sendMessage(FINAL_PROMPT);
-    // console.log("--",result?.response?.text());
+   console.log("--",result?.response?.text());
     setLoading(false);
     SaveAiTrip(result?.response?.text());
   } 

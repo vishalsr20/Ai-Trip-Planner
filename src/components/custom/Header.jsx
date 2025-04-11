@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import logo from "../../assets/333-removebg-preview.png"
 import { Button } from '../ui/button';
 import {
   Popover,
@@ -45,8 +46,9 @@ function Header() {
   }
 
   return (
-    <div className='p-3 shadow-sm flex justify-between items-center px-4'>
-      <img src='/logo.svg'/>
+    <div className='p-3 rounded overflow-hidden whitespace-nowrap   bg-slate-500  shadow-sm flex justify-between items-center px-4'>
+      <img src={logo} width={80} />
+      <div className='animate-marquee inline-block text-4xl font-serif text-slate-800'>Hello ,Plan you journey with Journey Junkies </div>
       <div >
        {user? 
        <div className='flex items-center gap-4'>
